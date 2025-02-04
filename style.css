@@ -1,7 +1,12 @@
+/* Tüm öğeler için kutu boyutlandırma */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; /* Alternatif olarak 'Open Sans' kullanabilirsiniz */
+    font-family: 'Roboto', sans-serif;
     background-color: #111;
     color: white;
     display: flex;
@@ -12,25 +17,21 @@ body {
 
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     padding: 20px;
-    box-sizing: border-box;
+    margin: 0 auto; /* Ortalamak için */
 }
 
 .profile-box {
     background: linear-gradient(135deg, #ff6b6b, #556270);
-    padding: 20px;
-    border-radius: 50px;
+    padding: 30px 20px;
+    border-radius: 30px;
     text-align: center;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
 }
 
 .profile-img {
-    width: 150px; /* Fotoğraf boyutu */
+    width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
@@ -39,31 +40,31 @@ body {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin: 10px 0;
 }
 
 .description {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
 .social-links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     width: 100%;
-    max-width: 450px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .social-links a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 15px;
     border-radius: 10px;
     width: 100%;
     max-width: 450px;
@@ -72,36 +73,60 @@ h1 {
     align-items: center;
 }
 
+/* Sosyal medya butonları için özel renkler */
+.social-links a.instagram {
+    background-color: #E1306C;
+}
+
+.social-links a.tiktok {
+    background-color: #010101;
+}
+
+.social-links a.spotify {
+    background-color: #1DB954;
+}
+
 .social-links a:hover {
     text-decoration: underline;
 }
 
-/* Sosyal medya butonları için özel renkler */
-.social-links a.instagram {
-    background-color: #E1306C; /* Instagram rengi */
-}
-
-.social-links a.tiktok {
-    background-color: #010101; /* TikTok rengi */
-}
-
-.social-links a.spotify {
-    background-color: #1DB954; /* Spotify rengi */
-}
-
 /* Duyarlı tasarım için medya sorgusu */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
     h1 {
         font-size: 20px;
     }
 
-    .profile-img {
-        width: 120px; /* Küçük ekranlar için fotoğraf boyutu */
-        height: 120px;
+    .description {
+        font-size: 14px;
     }
 
     .social-links a {
         font-size: 16px;
-        padding: 12px 15px;
+        padding: 10px;
     }
 }
