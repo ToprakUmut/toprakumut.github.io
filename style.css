@@ -4,7 +4,6 @@ body {
     font-family: 'Roboto', sans-serif; /* Alternatif olarak 'Open Sans' kullanabilirsiniz */
     background-color: #111;
     color: white;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,10 +11,8 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    max-width: 500px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -25,13 +22,10 @@ body {
     padding: 20px;
     border-radius: 50px;
     text-align: center;
-    width: 100%;
-    max-width: 500px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 30px;
     box-sizing: border-box;
 }
 
@@ -57,6 +51,7 @@ h1 {
 .social-links {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     width: 100%;
     max-width: 450px;
@@ -64,13 +59,14 @@ h1 {
 }
 
 .social-links a {
-    background-color: #ff6b6b;
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +74,19 @@ h1 {
 
 .social-links a:hover {
     text-decoration: underline;
+}
+
+/* Sosyal medya butonları için özel renkler */
+.social-links a.instagram {
+    background-color: #E1306C; /* Instagram rengi */
+}
+
+.social-links a.tiktok {
+    background-color: #010101; /* TikTok rengi */
+}
+
+.social-links a.spotify {
+    background-color: #1DB954; /* Spotify rengi */
 }
 
 /* Duyarlı tasarım için medya sorgusu */
@@ -93,6 +102,6 @@ h1 {
 
     .social-links a {
         font-size: 16px;
-        padding: 8px;
+        padding: 12px 15px;
     }
 }
