@@ -1,45 +1,41 @@
-/* Tüm öğeler için kutu boyutlandırma */
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #111;
     color: white;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* İçeriğe göre yükseklik */
+    height: 100vh;
 }
 
 .container {
-    width: 100%;
-    max-width: 500px; /* Maksimum genişlik */
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .profile-box {
     background: linear-gradient(135deg, #ff6b6b, #556270);
-    padding: 30px 20px; /* Daha iyi uyum için padding ayarlandı */
+    padding: 50px;
     border-radius: 50px;
     text-align: center;
-    width: 100%;
+    width: 500px;
+    height: 930px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
 }
 
 .profile-img {
-    width: 40%; /* Genişlik yüzde olarak ayarlandı */
-    max-width: 200px; /* Maksimum genişlik 200px */
-    height: auto; /* Yükseklik otomatik */
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
@@ -54,32 +50,27 @@ h1 {
 .description {
     font-size: 19px;
     margin-bottom: 30px;
-    padding: 0 10px; /* Metni kenarlardan uzaklaştırmak için */
-}
-
-.social-links {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .social-links a {
-    width: 100%; /* Genişlik tamamen doldurur */
-    max-width: 450px; /* Maksimum genişlik */
-    padding: 15px; /* Yükseklik yerine padding kullanıldı */
-    margin: 10px 0;
+    width: 450px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
     color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 80px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .social-links a:first-child {
+    margin-top: 5px;
     background-color: #E1306C;
 }
 
@@ -93,45 +84,7 @@ h1 {
 
 .social-links a:hover {
     text-decoration: underline;
-}
-
-/* Duyarlı tasarım için medya sorguları */
-@media (max-width: 768px) {
-    .profile-img {
-        width: 50%;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .description {
-        font-size: 17px;
-    }
-
-    .social-links a {
-        font-size: 18px;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .profile-img {
-        width: 60%;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    .description {
-        font-size: 16px;
-    }
-
-    .social-links a {
-        font-size: 16px;
-        padding: 10px;
-    }
+    text-align: center;
 }
 
 /* Karanlık ve aydınlık tema desteği */
